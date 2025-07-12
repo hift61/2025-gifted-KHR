@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Baekjoon Problem Helper</title>
+    <!-- Add MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <style>
+        body {
+            width: 400px;
+            padding: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+        }
+
+        #page-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            margin: -15px -15px 15px -15px;
+            background-color: #1a73e8;
+            color: white;
+            border-bottom: 2px solid #1557b0;
+        }
+
+        #limits-table {
+            width: 100%;
+            margin-bottom: 15px;
+            border-collapse: collapse;
+        }
+
+        #limits-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        #limits-table td:first-child {
+            font-weight: bold;
+            background-color: #f5f5f5;
+            width: 40%;
+        }
+
+        #limits-table td:nth-child(2) {
+            width: 60%;
+            background-color: white;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1a73e8;
+        }
+        
+        .content {
+            white-space: pre-wrap;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .sample-case {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        
+        .sample-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        #no-problem-message {
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+
+        /* Add styles for LaTeX containers */
+        .math-content {
+            overflow-x: auto;
+            padding: 15px;
+            line-height: 1.5;
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-title"></div>
+    <table id="limits-table">
+        <tr>
+            <td>Time Limit</td>
+            <td id="time-limit"></td>
+        </tr>
+        <tr>
+            <td>Memory Limit</td>
+            <td id="memory-limit"></td>
+        </tr>
+    </table>
+    <div id="problem-info">
+        <div class="section">
+            <div class="section-title">Problem</div>
+            <div id="problem-description" class="math-content"></div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Input Format</div>
+            <div id="input-format" class="math-content"></div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Output Format</div>
+            <div id="output-format" class="math-content"></div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Sample Cases</div>
+            <div id="sample-cases"></div>
+        </div>
+    </div>
+    
+    <div id="no-problem-message">
+        Please navigate to a Baekjoon problem page to view problem information.
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
